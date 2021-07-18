@@ -1,0 +1,447 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  background-color: #e7e9eb;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+//Global
+.bg-orange {
+  background-color: #f86534;
+}
+.bg-green {
+  background-color: #33cd39;
+}
+.bg-puple {
+  background-color: #8934ff;
+}
+.bg-blue {
+  background-color: #3162ff;
+}
+
+/*      Jobs List Start       */
+.title {
+  font-size: 18px;
+  line-height: 1.333;
+  font-weight: 500;
+  margin: 0 0 30px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #f6f8fa;
+}
+.wraper {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.job-list {
+  --gap: 30px;
+  --columns: 3;
+  display: grid;
+  grid-gap: var(--gap);
+  grid-template-columns: repeat(var(--columns), 1fr);
+  &-item {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(149, 157, 165, 0.377) 0px 0px 8px;
+  }
+  &-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.267) 0px 0px 4px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 20px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+  }
+  &-detail {
+    color: rgb(139, 139, 139);
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    line-height: 1.7;
+  }
+  &-tag {
+    margin: 20px 0 0px 0;
+    display: flex;
+    align-items: stretch;
+  }
+  & .tag-item {
+    padding: 8px 10px;
+    display: inline-block;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8d8d8d;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-radius: inherit;
+      background-color: currentColor;
+      opacity: 0.2;
+    }
+  }
+
+  &-friends {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    margin-left: 8px;
+  }
+  & .friends-item {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -8px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:nth-child(4) {
+      border: 1px solid #bbb;
+    }
+  }
+  & .friends-count {
+    margin-left: 10px;
+    color: #aaa;
+    font-size: 14px;
+  }
+
+  &-action {
+    display: flex;
+    justify-content: space-between;
+  }
+  & .action-button {
+    width: calc(100% / 2 - 10px);
+    outline: none;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    &--blue {
+      background-color: #2664ff;
+      color: white;
+      &:hover {
+        background-color: #2050c9;
+      }
+    }
+    &--gray {
+      background-color: #f1f1f5;
+      color: #81818c;
+      &:hover {
+        background-color: #dedee0;
+      }
+    }
+  }
+}
+/*      Jobs List End       */
+
+/*      Event List Start       */
+.event-list {
+  display: grid;
+  --width: 140px;
+  --height: 1fr;
+  --gap: 20px;
+  //   gap: var(--gap);
+  grid-gap: var(--gap);
+
+  grid-template:
+    "korn korn korn korn metronomy metronomy" var(--width)
+    "korn korn korn korn metronomy metronomy" var(--width)
+    "korn korn korn korn musicals circus" var(--width)
+    "cinema showz concerts children lectures exhibitions" var(--width)
+    "weezer weezer weezer performances performances  performances" var(--width)
+    "weezer weezer weezer performances performances performances" calc(
+      var(--width) / 2
+    )
+    ". . . performances performances performances" var(--width)
+    / var(--height) var(--height) var(--height) var(--height) var(--height) var(--height);
+}
+.event-item {
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  &--primary {
+    color: white;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &-top,
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-age {
+    padding: 14px 24px;
+    background-color: rgba(94, 94, 94, 0.39);
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  &-like {
+    padding: 14px;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &-price {
+    font-weight: bold;
+    font-size: 14px;
+    padding: 14px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    & i {
+      margin-right: 5px;
+    }
+  }
+  &--secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: rgb(231, 231, 231);
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 16px 0;
+    & i {
+      font-size: 18px;
+    }
+  }
+  &:hover {
+    box-shadow: rgba(45, 73, 100, 0.5) 0px 0px 40px;
+    filter: brightness(110%);
+  }
+}
+
+.korn {
+  grid-area: korn;
+  background-image: url(https://images.unsplash.com/photo-1544815633-1a8065078285?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80);
+}
+.metronomy {
+  grid-area: metronomy;
+  background-image: url(https://images.unsplash.com/photo-1619159846911-3687cc9e9820?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+}
+.musicals {
+  grid-area: musicals;
+  background-color: #1a1a1a;
+}
+.circus {
+  grid-area: circus;
+  background-color: #38beff;
+}
+.cinema {
+  grid-area: cinema;
+  background-image: url(https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80);
+}
+.show {
+  grid-area: showz;
+  background-color: #f86534;
+}
+.concerts {
+  grid-area: concerts;
+  background-image: url(https://images.unsplash.com/photo-1578946956088-940c3b502864?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1482&q=80);
+}
+.children {
+  grid-area: children;
+  background-color: #8934ff;
+}
+.lectures {
+  grid-area: lectures;
+  background-color: #3262ff;
+}
+.exhibitions {
+  grid-area: exhibitions;
+  background-image: url(https://images.unsplash.com/photo-1563841930606-67e2bce48b78?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80);
+}
+.weezer {
+  grid-area: weezer;
+  background-image: url(https://images.unsplash.com/photo-1598517834829-5980d842fbcf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80);
+}
+.performances {
+  grid-area: performances;
+  background-image: url(https://images.unsplash.com/photo-1461784180009-21121b2f204c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+}
+
+/*      Event List End       */
+
+@media screen and(max-width:1199px) {
+  .container {
+    border-radius: 0px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .job-list {
+    --columns: 2;
+  }
+  .event-list {
+    --width: 120px;
+    --height: 1fr;
+    --gap: 16px;
+    grid-template:
+      "korn korn korn korn korn korn" var(--width)
+      "korn korn korn korn korn korn" var(--width)
+      "korn korn korn korn korn korn" var(--width)
+      "metronomy metronomy musicals circus cinema showz" var(--width)
+      "metronomy metronomy concerts children lectures  exhibitions" var(--width)
+      "weezer weezer weezer performances performances performances" calc(
+        var(--width) / 2
+      )
+      "weezer weezer weezer performances performances performances" var(--width)
+      / var(--height) var(--height) var(--height) var(--height) var(--height) var(--height);
+    & .event-item {
+      &-bottom {
+        flex-direction: column;
+      }
+      &-price {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .event-list {
+    --width: 80px;
+    --height: 1fr;
+    --gap: 14px;
+
+    grid-template:
+      "korn korn korn korn korn korn" var(--width)
+      "korn korn korn korn korn korn" var(--width)
+      "korn korn korn korn korn korn" var(--width)
+      "metronomy metronomy metronomy metronomy metronomy metronomy" var(--width)
+      "metronomy metronomy metronomy metronomy metronomy  metronomy" var(
+        --width
+      )
+      "metronomy metronomy metronomy metronomy metronomy  metronomy" var(
+        --width
+      )
+      "musicals musicals circus circus cinema cinema" var(--width)
+      "musicals musicals circus circus cinema  cinema" var(--width)
+      "showz showz concerts concerts children children" var(--width)
+      "showz showz concerts concerts children children" var(--width)
+      "lectures lectures exhibitions exhibitions exhibitions exhibitions" var(
+        --width
+      )
+      "lectures lectures exhibitions exhibitions exhibitions  exhibitions" var(
+        --width
+      )
+      "weezer weezer weezer weezer weezer weezer" var(--width)
+      "weezer weezer weezer weezer weezer weezer" var(--width)
+      "weezer weezer weezer weezer weezer weezer" var(--width)
+      "performances performances performances performances performances performances" var(
+        --width
+      )
+      "performances performances performances performances performances performances" var(
+        --width
+      )
+      "performances performances performances performances performances performances" var(
+        --width
+      )
+      / var(--height) var(--height) var(--height) var(--height) var(--height) var(--height);
+    & .event-item {
+      &-bottom {
+        flex-direction: column;
+      }
+      &-price {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .job-list {
+    --columns: 1;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .event-list {
+    --width: 60px;
+    --gap: 12px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .event-list {
+    --width: 40px;
+    --gap: 10px;
+    & .event-item {
+      &-age {
+        padding: 8px 16px;
+      }
+      &-like {
+        padding: 8px;
+      }
+      &-title {
+        font-size: 16px;
+      }
+      &-price {
+        padding: 8px 12px;
+      }
+    }
+  }
+}
+/*      Responsive End      */
