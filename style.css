@@ -196,17 +196,21 @@ a {
   --height: 1fr;
   --gap: 20px;
   grid-gap: var(--gap);
-  grid-template: "korn korn korn korn metronomy metronomy" var(--width) "korn korn korn korn metronomy metronomy" var(
+  grid-template:
+    "korn korn korn korn metronomy metronomy" var(
       --width
-    ) "korn korn korn korn musicals circus" var(--width) "cinema showz concerts children lectures exhibitions" var(
+    ) "korn korn korn korn metronomy metronomy" var(--width)
+    "korn korn korn korn musicals circus" var(
       --width
-    ) "weezer weezer weezer performances performances  performances" var(
-      --width
-    ) "weezer weezer weezer performances performances performances" calc(
+    ) "cinema showz concerts children lectures exhibitions" var(--width)
+    "weezer weezer weezer performances performances  performances" var(--width)
+    "weezer weezer weezer performances performances performances" calc(
       var(--width) / 2
-    ) ". . . performances performances performances" var(--width) / var(
-      --height
-    ) var(--height) var(--height) var(--height) var(--height) var(--height);
+    )
+    "weezer weezer weezer performances performances performances" var(
+      --width
+    ) / var(--height)
+    var(--height) var(--height) var(--height) var(--height) var(--height);
 }
 
 .event-item {
@@ -349,19 +353,19 @@ a {
     --width: 120px;
     --height: 1fr;
     --gap: 16px;
-    grid-template: "korn korn korn korn korn korn" var(--width) "korn korn korn korn korn korn" var(
+    grid-template:
+      "korn korn korn korn korn korn" var(
         --width
-      ) "korn korn korn korn korn korn" var(--width) "metronomy metronomy musicals circus cinema showz" var(
+      ) "korn korn korn korn korn korn" var(--width)
+      "korn korn korn korn korn korn" var(
         --width
-      ) "metronomy metronomy concerts children lectures  exhibitions" var(
-        --width
-      ) "weezer weezer weezer performances performances performances" calc(
+      ) "metronomy metronomy musicals circus cinema showz" var(--width)
+      "metronomy metronomy concerts children lectures  exhibitions" var(--width)
+      "weezer weezer weezer performances performances performances" calc(
         var(--width) / 2
-      ) "weezer weezer weezer performances performances performances" var(
-        --width
-      ) / var(--height) var(--height) var(--height) var(--height) var(--height) var(
-        --height
-      );
+      )
+      "weezer weezer weezer performances performances performances" var(--width)
+      / var(--height) var(--height) var(--height) var(--height) var(--height) var(--height);
   }
   .event-list .event-item-bottom {
     flex-direction: column;
@@ -375,33 +379,48 @@ a {
     --width: 80px;
     --height: 1fr;
     --gap: 14px;
-    grid-template: "korn korn korn korn korn korn" var(--width) "korn korn korn korn korn korn" var(
+    grid-template:
+      "korn korn korn korn korn korn" var(
         --width
-      ) "korn korn korn korn korn korn" var(--width) "metronomy metronomy metronomy metronomy metronomy metronomy" var(
+      ) "korn korn korn korn korn korn" var(--width)
+      "korn korn korn korn korn korn" var(
         --width
-      ) "metronomy metronomy metronomy metronomy metronomy  metronomy" var(
+      ) "metronomy metronomy metronomy metronomy metronomy metronomy" var(
         --width
-      ) "metronomy metronomy metronomy metronomy metronomy  metronomy" var(
+      )
+      "metronomy metronomy metronomy metronomy metronomy  metronomy" var(
         --width
-      ) "musicals musicals circus circus cinema cinema" var(--width) "musicals musicals circus circus cinema  cinema" var(
+      )
+      "metronomy metronomy metronomy metronomy metronomy  metronomy" var(
         --width
-      ) "showz showz concerts concerts children children" var(--width) "showz showz concerts concerts children children" var(
+      )
+      "musicals musicals circus circus cinema cinema" var(
         --width
-      ) "lectures lectures exhibitions exhibitions exhibitions exhibitions" var(
+      ) "musicals musicals circus circus cinema  cinema" var(--width)
+      "showz showz concerts concerts children children" var(
         --width
-      ) "lectures lectures exhibitions exhibitions exhibitions  exhibitions" var(
+      ) "showz showz concerts concerts children children" var(--width)
+      "lectures lectures exhibitions exhibitions exhibitions exhibitions" var(
         --width
-      ) "weezer weezer weezer weezer weezer weezer" var(--width) "weezer weezer weezer weezer weezer weezer" var(
+      )
+      "lectures lectures exhibitions exhibitions exhibitions  exhibitions" var(
         --width
-      ) "weezer weezer weezer weezer weezer weezer" var(--width) "performances performances performances performances performances performances" var(
+      )
+      "weezer weezer weezer weezer weezer weezer" var(
+        --width
+      ) "weezer weezer weezer weezer weezer weezer" var(--width)
+      "weezer weezer weezer weezer weezer weezer" var(
         --width
       ) "performances performances performances performances performances performances" var(
         --width
-      ) "performances performances performances performances performances performances" var(
+      )
+      "performances performances performances performances performances performances" var(
         --width
-      ) / var(--height) var(--height) var(--height) var(--height) var(--height) var(
-        --height
-      );
+      )
+      "performances performances performances performances performances performances" var(
+        --width
+      )
+      / var(--height) var(--height) var(--height) var(--height) var(--height) var(--height);
   }
   .event-list .event-item-bottom {
     flex-direction: column;
