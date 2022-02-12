@@ -18,6 +18,64 @@ a {
   text-decoration: none;
 }
 
+.header {
+  display: flex;
+  padding: 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: center;
+}
+.header-left {
+  width: 50%;
+  padding-left: 20px;
+}
+
+.header-right {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.header__title {
+  text-transform: uppercase;
+  font-size: 40px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  text-align: center;
+  color: #777777;
+}
+
+.filter {
+  display: flex;
+  justify-content: right;
+}
+.filter-item {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+  padding: 0px 15px;
+}
+.filter-item a {
+  color: #747474;
+}
+.filter-item a:hover {
+  color: #1a1919;
+}
+.filter .feature1 a {
+  color: #00c3ff;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  color: #919191;
+}
+.footer span {
+  color: #ffb3bf;
+}
+
 .bg-orange {
   background-color: #f86534;
 }
@@ -197,19 +255,16 @@ a {
   --gap: 20px;
   grid-gap: var(--gap);
   grid-template:
-    "korn korn korn korn metronomy metronomy" var(
-      --width
-    ) "korn korn korn korn metronomy metronomy" var(--width)
-    "korn korn korn korn musicals circus" var(
-      --width
-    ) "cinema showz concerts children lectures exhibitions" var(--width)
+    "korn korn korn korn metronomy metronomy" var(--width)
+    "korn korn korn korn metronomy metronomy" var(--width)
+    "korn korn korn korn musicals circus" var(--width)
+    "cinema showz concerts children lectures exhibitions" var(--width)
     "weezer weezer weezer performances performances  performances" var(--width)
     "weezer weezer weezer performances performances performances" calc(
       var(--width) / 2
     )
-    "weezer weezer weezer performances performances performances" var(
-      --width
-    ) / var(--height)
+    "weezer weezer weezer performances performances performances" var(--width)
+    / var(--height)
     var(--height) var(--height) var(--height) var(--height) var(--height);
 }
 
@@ -354,12 +409,10 @@ a {
     --height: 1fr;
     --gap: 16px;
     grid-template:
-      "korn korn korn korn korn korn" var(
-        --width
-      ) "korn korn korn korn korn korn" var(--width)
-      "korn korn korn korn korn korn" var(
-        --width
-      ) "metronomy metronomy musicals circus cinema showz" var(--width)
+      "korn korn korn korn korn korn" var(--width)
+      "korn korn korn korn korn korn" var(--width)
+      "korn korn korn korn korn korn" var(--width)
+      "metronomy metronomy musicals circus cinema showz" var(--width)
       "metronomy metronomy concerts children lectures  exhibitions" var(--width)
       "weezer weezer weezer performances performances performances" calc(
         var(--width) / 2
@@ -380,38 +433,30 @@ a {
     --height: 1fr;
     --gap: 14px;
     grid-template:
-      "korn korn korn korn korn korn" var(
-        --width
-      ) "korn korn korn korn korn korn" var(--width)
-      "korn korn korn korn korn korn" var(
-        --width
-      ) "metronomy metronomy metronomy metronomy metronomy metronomy" var(
-        --width
-      )
+      "korn korn korn korn korn korn" var(--width)
+      "korn korn korn korn korn korn" var(--width)
+      "korn korn korn korn korn korn" var(--width)
+      "metronomy metronomy metronomy metronomy metronomy metronomy" var(--width)
       "metronomy metronomy metronomy metronomy metronomy  metronomy" var(
         --width
       )
       "metronomy metronomy metronomy metronomy metronomy  metronomy" var(
         --width
       )
-      "musicals musicals circus circus cinema cinema" var(
-        --width
-      ) "musicals musicals circus circus cinema  cinema" var(--width)
-      "showz showz concerts concerts children children" var(
-        --width
-      ) "showz showz concerts concerts children children" var(--width)
+      "musicals musicals circus circus cinema cinema" var(--width)
+      "musicals musicals circus circus cinema  cinema" var(--width)
+      "showz showz concerts concerts children children" var(--width)
+      "showz showz concerts concerts children children" var(--width)
       "lectures lectures exhibitions exhibitions exhibitions exhibitions" var(
         --width
       )
       "lectures lectures exhibitions exhibitions exhibitions  exhibitions" var(
         --width
       )
-      "weezer weezer weezer weezer weezer weezer" var(
-        --width
-      ) "weezer weezer weezer weezer weezer weezer" var(--width)
-      "weezer weezer weezer weezer weezer weezer" var(
-        --width
-      ) "performances performances performances performances performances performances" var(
+      "weezer weezer weezer weezer weezer weezer" var(--width)
+      "weezer weezer weezer weezer weezer weezer" var(--width)
+      "weezer weezer weezer weezer weezer weezer" var(--width)
+      "performances performances performances performances performances performances" var(
         --width
       )
       "performances performances performances performances performances performances" var(
